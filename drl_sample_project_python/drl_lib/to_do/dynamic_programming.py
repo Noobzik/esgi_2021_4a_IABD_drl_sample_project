@@ -1,5 +1,9 @@
+from .line_world.line_world_SA import LineWorld
 from ..do_not_touch.mdp_env_wrapper import Env1
 from ..do_not_touch.result_structures import ValueFunction, PolicyAndValueFunction
+
+from line_world import line_world_SA
+from policy import on_policy_first_visit_monte_carlo
 
 
 def policy_evaluation_on_line_world() -> ValueFunction:
@@ -8,8 +12,10 @@ def policy_evaluation_on_line_world() -> ValueFunction:
     Launches a Policy Evaluation Algorithm in order to find the Value Function of a uniform random policy
     Returns the Value function (V(s)) of this policy
     """
+    env = LineWorld(7, 10)
+    # return on_policy_first_visit_monte_carlo.on_policy_first_visit_monte_carlo_control()
     # TODO
-    pass
+    # pass
 
 
 def policy_iteration_on_line_world() -> PolicyAndValueFunction:
